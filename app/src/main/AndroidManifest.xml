@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.servicingly.phone.servicinglyweatherreport" >
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <application
+        android:allowBackup="true"
+        android:label="@string/app_name"
+        android:name="com.orm.SugarApp"
+        android:theme="@style/AppTheme" >
+
+        <activity
+            android:name="com.servicingly.phone.servicinglyweatherreport.Home"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.servicingly.phone.servicinglyweatherreport.WeatherReport"
+            android:label="Weather"
+            android:icon="@android:color/transparent"
+
+            android:parentActivityName=".Home"
+            android:screenOrientation="portrait"
+             >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.servicingly.phone.servicinglyweatherreport.Home" />
+        </activity>
+        <meta-data android:name="VERSION" android:value="2" />
+        <meta-data android:name="QUERY_LOG" android:value="true" />
+        <meta-data android:name="DOMAIN_PACKAGE_NAME" android:value="com.servicingly.phone.servicinglyweatherreport" />
+    </application>
+
+</manifest>
